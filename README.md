@@ -35,7 +35,17 @@ A FIFO is a sequential memory buffer that outputs data in the order it was writt
 - A `count` variable tracks the number of valid elements.
 - `full` is set when `count == depth`.
 - `empty` is set when `count == 0`.
-  
+
+  ## 📈 Waveform Output
+
+Below is a sample waveform showing:
+
+- Write of 4 values (10, 20, 30, 40)
+- Read back in same order
+- `full` and `empty` flag transitions
+
+![Waveform](waveform.png) 
+
 
 
 
