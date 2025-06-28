@@ -44,7 +44,7 @@ Below is a sample waveform showing:
 - Read back in same order
 - `full` and `empty` flag transitions
 
-![Waveform](waveform.png) 
+![Waveform](https://github.com/Nihal-210/Synchronous_FIFO/blob/main/Waveform.png) 
 
 
 
