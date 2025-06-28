@@ -3,15 +3,15 @@
 This project implements a **parameterized synchronous FIFO (First-In First-Out)** memory buffer using Verilog HDL. The design is verified with a detailed **testbench**, console monitoring using `$monitor`, and waveform analysis.
 ---
 
-## 📌 Overview
+## Overview
 
 A FIFO is a sequential memory buffer that outputs data in the order it was written. This design is fully synchronous, meaning both read and write operations are triggered on the same clock domain.
 
 ---
 
-## 🔧 Module Interface
+## Module Interface
 
-### 📥 Inputs
+### Inputs
 | Signal     | Width  | Description                        |
 |------------|--------|------------------------------------|
 | `clk`      | 1-bit  | Global clock signal                |
@@ -20,7 +20,7 @@ A FIFO is a sequential memory buffer that outputs data in the order it was writt
 | `r_en`     | 1-bit  | Read enable                        |
 | `data_in`  | 8-bit  | Data input to be written to FIFO   |
 
-### 📤 Outputs
+### Outputs
 | Signal     | Width  | Description                        |
 |------------|--------|------------------------------------|
 | `data_out` | 8-bit  | Data read from FIFO                |
@@ -29,18 +29,18 @@ A FIFO is a sequential memory buffer that outputs data in the order it was writt
 
 ---
 
-## 🧠 Internal Working
+## Working
 
 - FIFO is implemented as a **circular buffer** using read and write pointers (`r_ptr`, `w_ptr`).
 - A `count` variable tracks the number of valid elements.
 - `full` is set when `count == depth`.
 - `empty` is set when `count == 0`.
 
-  ## 📈 Waveform Output
+  ## Waveform Output
 
 Below is a sample waveform showing:
 
-- Write of 4 values (10, 20, 30, 40)
+- Write of 4 values (10, 20, 30, 40) (decimal)
 - Read back in same order
 - `full` and `empty` flag transitions
 
